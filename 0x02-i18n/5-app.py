@@ -58,7 +58,7 @@ def get_user():
         return users[int(Id)]
     else:
         return None
-    
+
 # babel.init_app(app, locale_selector=get_locale)
 
 
