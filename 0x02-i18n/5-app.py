@@ -48,7 +48,7 @@ def index():
     """
     renders index html page
     """
-    return render_template('4-index.html')
+    return render_template('5-index.html')
 
 
 def get_user():
@@ -58,6 +58,8 @@ def get_user():
         return users[int(Id)]
     else:
         return None
+    
+# babel.init_app(app, locale_selector=get_locale)
 
 
 if __name__ == '__main__':
