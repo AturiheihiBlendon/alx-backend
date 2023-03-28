@@ -22,7 +22,7 @@ class Config(object):
 app.config.from_object(Config)
 
 
-@babel.localeselector
+# @babel.localeselector
 def get_locale():
     """determines best match with supported languages"""
     return request.accept_languages.best_match(app.config('LANGUAGES'))
@@ -34,6 +34,10 @@ def index():
     renders index html page
     """
     return render_template('1-index.html')
+
+
+babel.init_app(app, locale_selector=get_locale)
+
 
 
 if __name__ == '__main__':
